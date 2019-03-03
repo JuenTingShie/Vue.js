@@ -39,7 +39,10 @@
 
     <div id="app-5">
       <p>{{ message }}</p>
-      <button v-bind:title=app2.message v-on:click="reverseMessage">反轉文字</button>
+      <button
+        v-bind:title=app2.message
+        v-on:click="reverseMessage"
+      >反轉文字</button>
     </div>
 
 <hr>
@@ -49,7 +52,14 @@
       <input v-model="message">
     </div>
 
-    
+<hr>
+
+    <ol>
+      <!-- 创建一个 todo-item 组件的实例 -->
+      <todo-item></todo-item>
+    </ol>
+
+
     <script src="index.js"></script>
   </body>
 </html>
