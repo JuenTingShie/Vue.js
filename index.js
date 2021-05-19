@@ -15,17 +15,22 @@ var app2 = new Vue({
 var app3 = new Vue({
   el: '#app-3',
   data: {
-    seen: true
+    seen: false
   }
 });
 
 var app4 = new Vue({
   el: '#app-4',
   data: {
-    todos: [
-      { text: '学习 JavaScript' },
-      { text: '学习 Vue' },
-      { text: '整个牛项目' }
+    todos: [{
+        text: '学习 JavaScript'
+      },
+      {
+        text: '学习 Vue'
+      },
+      {
+        text: '整个牛项目'
+      }
     ]
   }
 });
@@ -49,7 +54,34 @@ var app6 = new Vue({
   }
 });
 
-// 定义名为 todo-item 的新组件
 Vue.component('todo-item', {
-  template: '<li>这是个待办项</li>'
-});
+  // todo-item 组件现在接受一个
+  // "prop"，类似于一个自定义 attribute。
+  // 这个 prop 名为 todo。
+  props: ['todo'],
+  template: '<li>{{ todo.text }}</li>'
+})
+
+var app7 = new Vue({
+  el: '#app-7',
+  data: {
+    List: [{
+        id: 0,
+        text: 'hehe0'
+      },
+      {
+        id: 1,
+        text: 'hehe1'
+      },
+      {
+        id: 2,
+        text: 'hehe2'
+      },
+    ]
+  }
+})
+
+
+function toggle_seen(element) {
+  app3.seen = !app3.seen
+}
