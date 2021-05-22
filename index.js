@@ -81,6 +81,12 @@ var app7 = new Vue({
   }
 })
 
+var app3_1 = new Vue({
+  el: '#app-3_1',
+  data: {
+    message: 'hehehehehehehehe'
+  }
+})
 
 function toggle_seen(element) {
   app3.seen = !app3.seen

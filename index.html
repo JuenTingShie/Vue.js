@@ -24,8 +24,15 @@
   <hr>
 
   <div id="app-3">
-    <button onmouseenter="toggle_seen(this)" onmouseleave="toggle_seen(this)">Toggle seen</button>
-    <p v-if="seen">现在你看到我了</p>
+    <button onmouseenter="toggle_seen(this)">Toggle seen</button>
+    <p v-if="seen" onmouseleave="toggle_seen(this)">现在你看到我了</p>
+  </div>
+  <hr>
+  ｀
+  <div id="app-3_1">
+    <button v-bind:title="message">
+      现在你看到我了
+    </button>
   </div>
   <hr>
 
