@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Learning Vue.js</title>
+  <!-- Import newest Vue.js -->
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 
@@ -14,27 +15,43 @@
   </div>
 
   <hr>
+  <!-- xxx -->
 
   <div id="app-2">
     <span v-bind:title="message">
-      鼠标悬停几秒钟查看此处动态绑定的提示信息！
+      滑鼠懸停幾秒鐘查看此處動態綁定的提示訊息！
     </span>
   </div>
 
   <hr>
+  <!-- xxx -->
 
+  <!-- Javascript style -->
   <div id="app-3">
     <button onmouseenter="toggle_seen(this)">Toggle seen</button>
-    <p v-if="seen" onmouseleave="toggle_seen(this)">现在你看到我了</p>
+    <p v-if="seen" onmouseleave="toggle_seen(this)">現在你看到我了</p>
   </div>
+
   <hr>
-  ｀
+  <!-- xxx -->
+
+  <!-- Vue.js style -->
   <div id="app-3_1">
+    <button v-on:mouseover="toggleEle">Toggle seen</button>
+    <p v-if="seen" v-on:mouseleave="toggleEle">現在你看到我了</p>
+  </div>
+
+  <hr>
+  <!-- xxx -->
+
+  <div id="app-3_2">
     <button v-bind:title="message">
-      现在你看到我了
+      現在你看到我了
     </button>
   </div>
+
   <hr>
+  <!-- xxx -->
 
   <div id="app-4">
     <ol>
@@ -45,13 +62,15 @@
   </div>
 
   <hr>
+  <!-- xxx -->
 
   <div id="app-5">
     <p>{{ message }}</p>
-    <button v-bind:title=app2.message v-on:click="reverseMessage">反轉文字</button>
+    <button v-bind:title=message v-on:click="reverseMessage">反轉文字</button>
   </div>
 
   <hr>
+  <!-- xxx -->
 
   <div id="app-6">
     <p>{{ message }}</p>
@@ -59,6 +78,7 @@
   </div>
 
   <hr>
+  <!-- xxx -->
 
   <div id="app-7">
     <ol>
@@ -72,7 +92,10 @@
     </ol>
   </div>
 
+  <hr>
+  <!-- xxx -->
 
+  <!-- Load my Vue.js functions -->
   <script src="index.js"></script>
 </body>
 

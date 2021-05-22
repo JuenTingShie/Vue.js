@@ -8,7 +8,7 @@ var app = new Vue({
 var app2 = new Vue({
   el: '#app-2',
   data: {
-    message: '页面加载于 ' + new Date().toLocaleString()
+    message: '網頁載入於 ' + new Date().toLocaleString()
   }
 });
 
@@ -19,17 +19,38 @@ var app3 = new Vue({
   }
 });
 
+var app3_1 = new Vue({
+  el: '#app-3_1',
+  data: {
+    seen: false,
+    message: 'hehehehehehe'
+  },
+  methods: {
+    toggleEle: function () {
+      this.seen = !this.seen
+    }
+  }
+
+})
+
+var app3_2 = new Vue({
+  el: '#app-3_2',
+  data: {
+    message: 'hehehehehehehehe'
+  }
+})
+
 var app4 = new Vue({
   el: '#app-4',
   data: {
     todos: [{
-        text: '学习 JavaScript'
+        text: '學習 JavaScript'
       },
       {
-        text: '学习 Vue'
+        text: '學習 Vue'
       },
       {
-        text: '整个牛项目'
+        text: '整個項目'
       }
     ]
   }
@@ -78,13 +99,6 @@ var app7 = new Vue({
         text: 'hehe2'
       },
     ]
-  }
-})
-
-var app3_1 = new Vue({
-  el: '#app-3_1',
-  data: {
-    message: 'hehehehehehehehe'
   }
 })
 
