@@ -111,8 +111,8 @@ var app_header = new Vue({
     el: '#header',
     data: {
         List: [
-            { id: 0, text: 'Home', url: '/' },
-            { id: 1, text: 'Netflow', url: '/netflow' },
+            { id: 0, text: 'Home', url: '/Vue.js' },
+            { id: 1, text: 'Netflow', url: '/Vue.js/netflow' },
         ]
     }
 })
