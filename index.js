@@ -1,5 +1,5 @@
 // defines
-const root = '/'
+let root = '/'
 if (window.location.host == 'juentingshie.github.io') {
     root = 'https://juentingshie.github.io/Vue.js/'
 }
