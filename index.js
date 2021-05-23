@@ -1,4 +1,8 @@
-import root from "define"
+let root = '/'
+if (window.location.host == 'juentingshie.github.io') {
+    root = 'https://juentingshie.github.io/Vue.js/'
+}
+
 
 var app = new Vue({
   el: '#app',
@@ -114,7 +118,7 @@ var app_header = new Vue({
     data: {
         List: [
             { id: 0, text: 'Home', url: root },
-            { id: 1, text: 'Netflow', url: root + '/netflow' },
+            { id: 1, text: 'Netflow', url: root + 'netflow' },
         ]
     }
 })

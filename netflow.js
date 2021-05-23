@@ -1,3 +1,8 @@
+let root = '/'
+if (window.location.host == 'juentingshie.github.io') {
+    root = 'https://juentingshie.github.io/Vue.js/'
+}
+
 Vue.component('header-items', {
     props: ['header'],
     // template: '<a href={{ header.url }}>{{ header.text }}</a>'
@@ -8,7 +13,7 @@ var app_header = new Vue({
     data: {
         List: [
             { id: 0, text: 'Home', url: root },
-            { id: 1, text: 'Netflow', url: root + '/netflow' },
+            { id: 1, text: 'Netflow', url: root + 'netflow' },
         ]
     }
 })
