@@ -1,3 +1,5 @@
+import root from "define"
+
 var app = new Vue({
   el: '#app',
   data: {
@@ -111,12 +113,13 @@ var app_header = new Vue({
     el: '#header',
     data: {
         List: [
-            { id: 0, text: 'Home', url: '/Vue.js' },
-            { id: 1, text: 'Netflow', url: '/Vue.js/netflow' },
+            { id: 0, text: 'Home', url: root },
+            { id: 1, text: 'Netflow', url: root + '/netflow' },
         ]
     }
 })
 
+console.log(window.location.host)
 
 function toggle_seen(element) {
   app3.seen = !app3.seen
