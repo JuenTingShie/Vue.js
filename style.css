@@ -1,0 +1,42 @@
+/* fonts */
+@font-face {
+  font-family: NotoSansTC;
+  font-style: normal;
+  /* font-weight: Regular; */
+  src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.otf) format('opentype');
+  font-display: block;
+       /* src: url(/fonts/Sans\ Forgetica/SansForgetica-Regular.otf) format("opentype"); */
+}
+/* fonts */
+
+body { font-family: NotoSansTC; }
+
+button{
+    font-family: NotoSansTC;
+}
+
+div#header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+div#header li {
+  float: left;
+}
+
+div#header li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+div#header li a:hover {
+  background-color: #111111;
+}

@@ -82,7 +82,6 @@ Vue.component('todo-item', {
   props: ['todo'],
   template: '<li>{{ todo.text }}</li>'
 })
-
 var app7 = new Vue({
   el: '#app-7',
   data: {
@@ -101,6 +100,23 @@ var app7 = new Vue({
     ]
   }
 })
+
+
+Vue.component('header-items', {
+    props: ['header'],
+    // template: '<a href={{ header.url }}>{{ header.text }}</a>'
+    template: '<li><a :href="`${header.url}`">{{header.text}}</a></li>'
+  })
+var app_header = new Vue({
+    el: '#header',
+    data: {
+        List: [
+            { id: 0, text: 'Home', url: '/' },
+            { id: 1, text: 'Netflow', url: '/netflow' },
+        ]
+    }
+})
+
 
 function toggle_seen(element) {
   app3.seen = !app3.seen

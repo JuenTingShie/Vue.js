@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue.js for watching netflow of NTUST</title>
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Import newest Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <div id='header'>
+        <ul>
+            <header-items v-for="i in List" v-bind:header="i" v-bind:key="i.id">
+            </header-items>
+        </ul>
+    </div>
+
+    <hr>
+    <!-- xxx -->
+    <h1>Netflow watcher of NTUST, made with Vue.js</h1>
+
+    <!-- Load my Vue.js functions -->
+    <script src="index.js"></script>
+</body>
+
+</html>

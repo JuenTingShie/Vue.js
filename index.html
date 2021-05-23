@@ -2,101 +2,122 @@
 <html lang="zh-tw">
 
 <head>
-  <meta charset="utf-8">
-  <title>Learning Vue.js</title>
-  <!-- Import newest Vue.js -->
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <meta charset="utf-8">
+    <title>Learning Vue.js</title>
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="style.css">
+    </link>
+    <!-- Import newest Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 
 <body>
+    <div id='header'>
+        <ul>
+            <header-items v-for="i in List" v-bind:header="i" v-bind:key="i.id">
+            </header-items>
+        </ul>
+    </div>
 
-  <div id="app">
-    {{ message }}
-  </div>
+    <hr>
+    <!-- xxx -->
 
-  <hr>
-  <!-- xxx -->
+    <div id="test">
+        <ul>
+            <li>aaa</li>
+            <li>aaa</li>
+            <li>aaa</li>
+        </ul>
+    </div>
 
-  <div id="app-2">
-    <span v-bind:title="message">
-      滑鼠懸停幾秒鐘查看此處動態綁定的提示訊息！
-    </span>
-  </div>
 
-  <hr>
-  <!-- xxx -->
+    <div id="app">
+        {{ message }}
+    </div>
 
-  <!-- Javascript style -->
-  <div id="app-3">
-    <button onmouseenter="toggle_seen(this)">Toggle seen</button>
-    <p v-if="seen" onmouseleave="toggle_seen(this)">現在你看到我了</p>
-  </div>
+    <hr>
+    <!-- xxx -->
 
-  <hr>
-  <!-- xxx -->
+    <div id="app-2">
+        <span v-bind:title="message">
+            滑鼠懸停幾秒鐘查看此處動態綁定的提示訊息！
+        </span>
+    </div>
 
-  <!-- Vue.js style -->
-  <div id="app-3_1">
-    <button v-on:mouseover="toggleEle">Toggle seen</button>
-    <p v-if="seen" v-on:mouseleave="toggleEle">現在你看到我了</p>
-  </div>
+    <hr>
+    <!-- xxx -->
 
-  <hr>
-  <!-- xxx -->
+    <!-- Javascript style -->
+    <div id="app-3">
+        <button onmouseenter="toggle_seen(this)">Toggle seen</button>
+        <p v-if="seen" onmouseleave="toggle_seen(this)">現在你看到我了</p>
+    </div>
 
-  <div id="app-3_2">
-    <button v-bind:title="message">
-      現在你看到我了
-    </button>
-  </div>
+    <hr>
+    <!-- xxx -->
 
-  <hr>
-  <!-- xxx -->
+    <!-- Vue.js style -->
+    <div id="app-3_1">
+        <button v-on:mouseover="toggleEle">Toggle seen</button>
+        <p v-if="seen" v-on:mouseleave="toggleEle">現在你看到我了</p>
+    </div>
 
-  <div id="app-4">
-    <ol>
-      <li v-for="thing in todos">
-        {{ thing.text }}
-      </li>
-    </ol>
-  </div>
+    <hr>
+    <!-- xxx -->
 
-  <hr>
-  <!-- xxx -->
+    <div id="app-3_2">
+        <button v-bind:title="message">
+            現在你看到我了
+        </button>
+    </div>
 
-  <div id="app-5">
-    <p>{{ message }}</p>
-    <button v-bind:title=message v-on:click="reverseMessage">反轉文字</button>
-  </div>
+    <hr>
+    <!-- xxx -->
 
-  <hr>
-  <!-- xxx -->
+    <div id="app-4">
+        <ol>
+            <li v-for="thing in todos">
+                {{ thing.text }}
+            </li>
+        </ol>
+    </div>
 
-  <div id="app-6">
-    <p>{{ message }}</p>
-    <input v-model="message">
-  </div>
+    <hr>
+    <!-- xxx -->
 
-  <hr>
-  <!-- xxx -->
+    <div id="app-5">
+        <p>{{ message }}</p>
+        <button v-bind:title=message v-on:click="reverseMessage">反轉文字</button>
+    </div>
 
-  <div id="app-7">
-    <ol>
-      <!--
+    <hr>
+    <!-- xxx -->
+
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
+    </div>
+
+    <hr>
+    <!-- xxx -->
+
+    <div id="app-7">
+        <ol>
+            <!--
       现在我们为每个 todo-item 提供 todo 对象
       todo 对象是变量，即其内容可以是动态的。
       我们也需要为每个组件提供一个“key”，稍后再
       作详细解释。
     -->
-      <todo-item v-for="item in List" v-bind:todo="item" v-bind:key="item.id"></todo-item>
-    </ol>
-  </div>
+            <todo-item v-for="item in List" v-bind:todo="item" v-bind:key="item.id"></todo-item>
+        </ol>
+    </div>
 
-  <hr>
-  <!-- xxx -->
+    <hr>
+    <!-- xxx -->
 
-  <!-- Load my Vue.js functions -->
-  <script src="index.js"></script>
+    <!-- Load my Vue.js functions -->
+    <script src="index.js"></script>
 </body>
 
 </html>
