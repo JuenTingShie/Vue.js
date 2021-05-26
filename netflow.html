@@ -13,7 +13,7 @@
 <body>
     <div id='header'>
         <ul>
-            <header-items v-for="i in List" v-bind:header="i" v-bind:key="i.id">
+            <header-items v-for=" i in List" v-bind:header="i" v-bind:key="i.id">
             </header-items>
         </ul>
     </div>
@@ -22,6 +22,13 @@
     <!-- xxx -->
     <h1>Netflow watcher of NTUST, made with Vue.js</h1>
 
+    <div id='ips'>
+        <!-- <button v-on:click="getflow">Get flow</button> -->
+        <ul>
+            <ips v-for="i in List" v-bind:ip="i">
+            </ips>
+        </ul>
+    </div>
     <!-- Load my Vue.js functions -->
     <script src="netflow.js"></script>
 </body>
