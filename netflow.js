@@ -32,10 +32,13 @@ Vue.component('ips', {
         getflow: async function () {
             var ip = this.$el.ownerDocument.activeElement.value
             var index
-            ipof417.List.forEach(element => {
+            ipof417.List.every(element => {
                 if (element.ip == ip) {
                     index = ipof417.List.indexOf(element)
+                    // console.log(index)
+                    return false;
                 }
+                return true;
             });
             ipof417.List[index].flow = await caller(ip)
         }
@@ -69,7 +72,7 @@ var ipof417 = new Vue({
                 pair = pair.split('=');
                 return obj[pair[0]] = pair[1], obj;
             }, {});
-            console.log(data['ip']);
+            // console.log(data['ip']);
             ipof417.List[0].ip = data['ip']
         });
 

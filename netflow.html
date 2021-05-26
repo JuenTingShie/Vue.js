@@ -24,6 +24,29 @@
     <!-- xxx -->
     <h1>Netflow watcher of NTUST, made with Vue.js</h1>
 
+    <!-- Time -->
+    <h3>
+        <div id="time"></div>
+    </h3>
+    <!-- Time -->
+    <script>
+        function updateClock() {
+            var now = new Date()
+            time = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds() // again, you get the idea
+
+            // a cleaner way than string concatenation
+            var now = new Date(Date.now());
+            var today = now.toLocaleDateString("zh-TW")
+
+            // set the content of the element with the ID time to the formatted string
+            document.getElementById('time').innerHTML = [today, time].join(' ');
+
+            // call this function again in 1000ms
+            setTimeout(updateClock, 1000);
+        }
+        updateClock();
+    </script>
+
     <div id='ips'>
         <!-- <button v-on:click="getflow">Get flow</button> -->
         <ul>
