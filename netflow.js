@@ -93,7 +93,7 @@ async function create_fetch(ip) {
 
     var now = new Date(Date.now());
 
-    var today = now.toLocaleDateString("zh-TW")
+    var today = now.toLocaleDateString("zh-TW").split('/').join('-')
 
     var dt = today + "T00:00:00.000"
 
@@ -106,12 +106,12 @@ async function create_fetch(ip) {
             throw new Error('Network response was not ok.')
         })
         .then((c) => {
-            // console.log(c.contents)
+            console.log(c.contents)
             return JSON.parse(c.contents)
             // jsonData['items'][0]['totflow']
         })
         .then((jsonData) => {
-            // console.log(jsonData['items'][0]['totflow'])
+            console.log(jsonData['items'][0]['totflow'])
             return jsonData['items'][0]['totflow']
         })
 }
