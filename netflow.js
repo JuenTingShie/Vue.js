@@ -59,7 +59,20 @@ var ipof417 = new Vue({
             // console.log(this.flow)
         }
     },
-    created: function () {
+    created: async function () {
+        this.List.push({ ip: "", flow: "NaN" })
+
+        $.get('https://www.cloudflare.com/cdn-cgi/trace', function (data) {
+            // Convert key-value pairs to JSON
+            // https://stackoverflow.com/a/39284735/452587
+            data = data.trim().split('\n').reduce(function (obj, pair) {
+                pair = pair.split('=');
+                return obj[pair[0]] = pair[1], obj;
+            }, {});
+            console.log(data['ip']);
+            ipof417.List[0].ip = data['ip']
+        });
+
         var i = 2
         while (i < 254) {
             this.List.push({ ip: '140.118.5.' + i.toString(), flow: 'NaN' })
